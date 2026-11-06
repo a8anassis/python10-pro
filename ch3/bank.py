@@ -2,22 +2,22 @@
 
 EXIT_VALUE = 0
 BANKNOTE = 20
-BALANCE = 1000
+INITIAL_BALANCE = 1000
 
 
 def main() -> None:
     """Εκτελεί αναλήψεις ελέγχοντας πρώτα τα error states."""
-    initial_balance = BALANCE
+    balance = INITIAL_BALANCE
 
     while True:
-        print(f"Το υπόλοιπό σας είναι: {initial_balance}€")
+        print(f"Το υπόλοιπό σας είναι: {balance}€")
         amount = int(input("Εισάγετε το ποσό που θέλετε να αναλάβετε (0 για έξοδο): "))
 
         if amount == EXIT_VALUE:
             print("Έξοδος από το πρόγραμμα.")
             break
 
-        if amount > initial_balance:
+        if amount > balance:
             print("Σφάλμα: Δεν έχετε αρκετά χρήματα στο λογαριασμό σας.")
             continue
 
@@ -25,8 +25,8 @@ def main() -> None:
             print(f"Σφάλμα: Το ποσό πρέπει να είναι πολλαπλάσιο των {BANKNOTE}€.")
             continue
 
-        initial_balance -= amount
-        print(f"Η ανάληψη των {amount}€ ολοκληρώθηκε. Το νέο υπόλοιπο είναι: {initial_balance}€\n")
+        balance -= amount
+        print(f"Η ανάληψη των {amount}€ ολοκληρώθηκε. Το νέο υπόλοιπο είναι: {balance}€\n")
 
 
 if __name__ == "__main__":
