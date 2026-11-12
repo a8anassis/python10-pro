@@ -1,8 +1,8 @@
 """Convert hours to minutes and seconds."""
 
-
 MINUTES_PER_HOUR = 60
 SECONDS_PER_MINUTE = 60
+
 
 def main() -> None:
     """Διαβάζει έναν αριθμό ωρών από τον χρήστη και εκτυπώνει τον αντίστοιχο αριθμό λεπτών και δευτερολέπτων."""

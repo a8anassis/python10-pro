@@ -15,7 +15,7 @@ def main() -> None:
     tank2 = 15
 
     # Processing: Έλεγχος επιπέδων δεξαμενών
-    is_red_alarm = tank1 < LOW_LEVEL and tank2 < LOW_LEVEL
+    is_red_alarm = (tank1 < LOW_LEVEL) and (tank2 < LOW_LEVEL)
     is_orange_alarm = (tank1 < LOW_LEVEL) ^ (tank2 < LOW_LEVEL)  # XOR Bitwise operator
 
     # Εκτύπωση αποτελεσμάτων

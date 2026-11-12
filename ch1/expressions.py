@@ -11,5 +11,6 @@ x = y = 0
 total = num1 + num2 + 12
 mul = total * 7
 div = total / 4             # πάντα επιστρέφει float
-floor_div = total // 4      # επιστρέφει integer (ακέραιο πηλίκο)
+floor_div = total // 4      # επιστρέφει integer (ακέραιο πηλίκο) -- floor division
 mod = total % 4             # επιστρέφει το υπόλοιπο της διαίρεσης
+result = 2 ** 3                 # δύναμη (2^3 = 8)
