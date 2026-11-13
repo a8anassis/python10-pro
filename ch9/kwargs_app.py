@@ -4,7 +4,7 @@ of keyword arguments to a function. It is often used when you want to create fun
  """
 
 
-def build_profile(firstname: str, lastname: str, **kwargs):
+def build_profile(firstname: str, lastname: str, **kwargs) -> dict:
     """Build a dictionary containing everything we know about a user."""
     profile = { "firstname": firstname, "lastname": lastname}
 
