@@ -17,16 +17,20 @@ def main() -> None:
             print("Έξοδος από το πρόγραμμα.")
             break
 
+        if amount < 0:
+            print("Σφάλμα: Το ποσό δεν μπορεί να είναι αρνητικό.")
+            continue
+
         if amount > balance:
             print("Σφάλμα: Δεν έχετε αρκετά χρήματα στο λογαριασμό σας.")
             continue
 
         if amount % BANKNOTE != 0:
-            print(f"Σφάλμα: Το ποσό πρέπει να είναι πολλαπλάσιο των {BANKNOTE}€.")
+            print(f"Σφάλμα: Το ποσό πρέπει να είναι πολλαπλάσιο των {BANKNOTE}\u20AC.")
             continue
 
         balance -= amount
-        print(f"Η ανάληψη των {amount}€ ολοκληρώθηκε. Το νέο υπόλοιπο είναι: {balance}€\n")
+        print(f"Η ανάληψη των {amount}\u20AC ολοκληρώθηκε. Το νέο υπόλοιπο είναι: {balance}\u20AC\n")
 
 
 if __name__ == "__main__":

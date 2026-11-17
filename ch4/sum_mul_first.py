@@ -24,7 +24,12 @@ def multiply_first_ints(n: int) -> int:
 
 def main() -> None:
     """Κύρια συνάρτηση για την εκτέλεση του προγράμματος."""
-    n = 10
+    n = int(input("Εισάγετε έναν θετικό ακέραιο αριθμό n: "))
+
+    if n < 1:
+        print("Σφάλμα: Ο αριθμός πρέπει να είναι θετικός ακέραιος.")
+        return
+
     sum_result = sum_first_ints(n)
     product_result = multiply_first_ints(n)
 
