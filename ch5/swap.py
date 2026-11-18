@@ -21,5 +21,6 @@ def main() -> None:
 
     print(f"Μετά την ανταλλαγή: num1 = {num1}, num2 = {num2}")
 
+
 if __name__ == "__main__":
     main()

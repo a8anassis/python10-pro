@@ -14,6 +14,9 @@ for el in my_list:
 for i, el in enumerate(my_list):
     print(f"Index: {i}, Element: {el}")
 
+for el1, el2 in zip(my_list, my_list2):
+    print(f"Element from my_list: {el1}, Element from my_list2: {el2}")
+
 # add elements to the list
 my_list.append(6)
 my_list.extend([7, 8, 9])
@@ -40,7 +43,7 @@ try:
 except ValueError:
     index = -1   # ή None, ή ό,τι σημαίνει «δε βρέθηκε»
 
-# reverse the list
+# traverse in reverse the list and remove elements from the list
 for i in range(len(my_list) - 1, -1, -1):
     if my_list[i] % 2 == 0:
         del my_list[i]

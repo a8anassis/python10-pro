@@ -1,7 +1,7 @@
 """Ανάληψη από ATM."""
 
 EXIT_VALUE = 0
-BANKNOTE = 20
+EURO20 = 20
 INITIAL_BALANCE = 1000
 
 
@@ -10,7 +10,6 @@ def main() -> None:
     balance = INITIAL_BALANCE
 
     while True:
-        print(f"Το υπόλοιπό σας είναι: {balance}€")
         amount = int(input("Εισάγετε το ποσό που θέλετε να αναλάβετε (0 για έξοδο): "))
 
         if amount == EXIT_VALUE:
@@ -25,8 +24,8 @@ def main() -> None:
             print("Σφάλμα: Δεν έχετε αρκετά χρήματα στο λογαριασμό σας.")
             continue
 
-        if amount % BANKNOTE != 0:
-            print(f"Σφάλμα: Το ποσό πρέπει να είναι πολλαπλάσιο των {BANKNOTE}\u20AC.")
+        if amount % EURO20 != 0:
+            print(f"Σφάλμα: Το ποσό πρέπει να είναι πολλαπλάσιο των {EURO20}\u20AC.")
             continue
 
         balance -= amount

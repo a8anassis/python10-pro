@@ -5,19 +5,19 @@ class Point:
     """A point in 2D space."""
 
     def __init__(self, x: float, y: float) -> None:
-        self._x = x     # κατά σύμβαση, private attribute με _
-        self._y = y
+        self.x = x
+        self.y = y
 
     def __str__(self)  -> str:
-        return f"Point({self._x}, {self._y})"
+        return f"({self.x}, {self.y})"
 
     def __repr__(self) -> str:
-        return f"Point({self._x!r}, {self._y!r})"
+        return f"Point({self.x!r}, {self.y!r})"
 
     def __eq__(self, other: object) -> bool:
         if not isinstance(other, Point):
             return NotImplemented
-        return self._x == other._x and self._y == other._y
+        return self.x == other.x and self.y == other.y
 
 
 def main() -> None:
