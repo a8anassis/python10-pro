@@ -11,7 +11,11 @@ MODEL = os.getenv("MODEL")                 # anthropic/claude-haiku-5-5
 message = {"role": "user", "content": "Πες μου για την ιστορία του Ηρακλείου Κρήτης σε 3 παραγράφους."}
 
 
-response = litellm.completion(model=MODEL, messages=[message], stream=True)
+response = litellm.completion(
+    model=MODEL,
+    messages=[message],
+    stream=True
+)
 # Τα ίδια τα chunks είναι τα events (ή τα πακέτα δεδομένων των events) που φτάνουν από τον διακομιστή.
 #
 # Για να το καταλάβεις καλύτερα, πίσω από το streaming βρίσκεται μια τεχνολογία που λέγεται SSE (Server-Sent Events).
