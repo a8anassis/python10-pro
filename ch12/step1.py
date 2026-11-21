@@ -16,6 +16,7 @@ import litellm
 #
 # Endpoint: /v1/completions
 
+
 # Chat completion (ChatGPT, 2023). Αντί για σκέτο κείμενο στέλνεις λίστα μηνυμάτων με ρόλους (system, user, assistant).
 # Εσωτερικά η λίστα γίνεται ένα κείμενο με ειδικά tokens που σημειώνουν τους ρόλους.
 # Η λίστα που περνάς στην παράμετρο messages. Στον κώδικά σου είναι η [message]:
