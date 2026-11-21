@@ -1,8 +1,11 @@
 """Βήμα 1: η ελάχιστη κλήση σε LLM."""
+import os
 
 from dotenv import load_dotenv
 load_dotenv()
 import litellm
+
+MODEL = os.getenv("MODEL")                 # anthropic/claude-opus-5-5
 
 # Completion σημαίνει συμπλήρωση, και το όνομα περιγράφει κυριολεκτικά τι κάνει ένα LLM.
 # Του δίνεις ένα κείμενο και αυτό το συνεχίζει, προβλέποντας το επόμενο token ξανά και ξανά.
@@ -41,7 +44,7 @@ import litellm
 
 message = {"role": "user", "content": "Ποια είναι η πρωτεύουσα της Κρήτης;"}
 response = litellm.completion(
-    model="anthropic/claude-haiku-5-5",
+    model=MODEL,
     messages=[message]
 )
 print(response.choices[0].message.content)
