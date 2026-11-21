@@ -10,7 +10,6 @@ MODEL = os.getenv("MODEL")                 # anthropic/claude-haiku-5-5
 
 message = {"role": "user", "content": "Πες μου για την ιστορία του Ηρακλείου Κρήτης σε 3 παραγράφους."}
 
-
 response = litellm.completion(
     model=MODEL,
     messages=[message],
